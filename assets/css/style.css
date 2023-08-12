@@ -1,0 +1,121 @@
+body {
+    background: #74ebd5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Roboto Mono', monospace;
+    margin: 0 auto;
+}
+
+#container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#container-wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    margin: 100px auto;
+}
+
+.heading {
+    width: 100%;
+    background-color: rgba(23, 138, 245, 0.986);
+    color: azure;
+    line-height: 2em;
+}
+
+
+h1 {
+    text-transform: uppercase;
+    padding: 0 20px;
+}
+
+.fa-plus {
+    float: right;
+}
+
+
+input[type="text"] {
+    box-sizing: border-box;
+    background-color: #e5e6e9;
+    height: 40px;
+    width: 100%;
+    font-size: 18px;
+    padding: 13px 13px 13px 20px;
+    border: 3px solid rgba(0, 0, 0, 0);
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border: 3px solid rgba(23, 138, 245, 0.986);
+    background-color: white;
+}
+
+input::after {
+    border-color: #74ebd5;
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
+}
+
+ul {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    background-color: #ACB6E5;
+    height: 40px;
+    color: rgb(41, 40, 40);
+}
+
+li:nth-child(2n) {
+    background-color: #e5e6e9;
+}
+
+li span {
+    vertical-align: middle;
+    background-color: #e74c3c;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    width: 0px;
+    display: inline-block;
+    transition: 0.2s linear;
+    opacity: 0;
+    color: aliceblue;
+    position: relative;
+}
+
+li span:hover {
+    width: 40px;
+    opacity: 1.0;
+}
+
+li span svg {
+    top: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(-50%);
+}
+
+.rotated {
+    transform: rotate(45deg);
+}
